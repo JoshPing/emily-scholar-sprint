@@ -1,1 +1,38 @@
-<html><body><h1>Megaprojects Level 1 - Bilingual</h1></body></html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Level 1: Megaprojects (Bilingual)</title>
+  <script>
+    function toggleExplanation(id) {
+      var x = document.getElementById(id);
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+  </script>
+</head>
+<body style="font-family: sans-serif; padding: 20px;">
+  <h2>Question 1:</h2>
+  <p>What is the main goal of NEOM, the planned city in Saudi Arabia?</p>
+  <ul>
+    <li>A. A film production hub</li>
+    <li>B. A new agricultural center</li>
+    <li><strong>C. A clean-energy smart city</strong></li>
+    <li>D. A desert wildlife reserve</li>
+  </ul>
+  <p><strong>✅ Correct!</strong> NEOM is planned to use clean energy and new tech to create a smart city for the future.</p>
+  <button onclick="toggleExplanation('exp1')">📖 Expand Explanation</button>
+  <div id="exp1" style="display:none; background:#eef; padding:10px; margin-top:10px;">
+    <strong>📘 关键词解释：</strong><br>
+    - clean-energy city：清洁能源城市<br>
+    - planned：被规划的<br>
+    - smart city：智能城市（使用科技进行管理）<br><br>
+    <strong>🧠 推理说明：</strong><br>
+    题目问“目标”，NEOM不是电影城市或农业区，而是用科技与清洁能源打造的未来型城市。
+  </div>
+</body>
+</html>
