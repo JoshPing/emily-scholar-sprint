@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Level 1: Megaprojects (Interactive)</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background-color: #f9f9ff; }
+    .question { margin-bottom: 30px; }
+    .option { margin: 5px 0; padding: 10px; background-color: #e0ecff; border: 1px solid #aaa; border-radius: 5px; cursor: pointer; }
+    .option:hover { background-color: #d0e0f8; }
+    .feedback { display: none; margin-top: 10px; padding: 10px; background-color: #e6ffe6; border-left: 4px solid #4CAF50; }
+    .explanation { display: none; margin-top: 10px; padding: 10px; background-color: #f0f0ff; border-left: 4px solid #3333cc; }
+    button { margin-top: 10px; }
+  </style>
+  <script>
+    function checkAnswer(selected, correctId, feedbackId, expId) {
+      if (selected === correctId) {
+        document.getElementById(feedbackId).innerText = "✅ Correct!";
+      } else {
+        document.getElementById(feedbackId).innerText = "❌ Oops! Try again.";
+      }
+      document.getElementById(feedbackId).style.display = "block";
+    }
+
+    function toggleExplanation(expId) {
+      var exp = document.getElementById(expId);
+      exp.style.display = exp.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</head>
+<body>
+  <h1>🔹 Level 1: Megaprojects</h1>
+
+  <div class="question">
+    <h3>1. What is the main goal of NEOM, the planned city in Saudi Arabia?</h3>
+    <div class="option" onclick="checkAnswer('A','C','fb1','exp1')">A. A film production hub</div>
+    <div class="option" onclick="checkAnswer('B','C','fb1','exp1')">B. A new agricultural center</div>
+    <div class="option" onclick="checkAnswer('C','C','fb1','exp1')">C. A clean-energy smart city</div>
+    <div class="option" onclick="checkAnswer('D','C','fb1','exp1')">D. A desert wildlife reserve</div>
+    <div id="fb1" class="feedback"></div>
+    <button onclick="toggleExplanation('exp1')">📖 Expand Explanation</button>
+    <div id="exp1" class="explanation">
+      <strong>📘 Keywords:</strong><br>
+      - clean-energy city: 清洁能源城市<br>
+      - smart city: 智慧城市<br><br>
+      <strong>🧠 Reasoning:</strong><br>
+      NEOM's goal is to build a futuristic, sustainable city powered by renewable energy. It's not about film, farming, or animals.
+    </div>
+  </div>
+
+</body>
+</html>
