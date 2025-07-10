@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>🎲 Scholar Sprint Random Quiz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="quiz-style.css" />
+</head>
+<body>
+  <h1>🎲 Random Practice Quiz</h1>
+  <div id="quiz-container"></div>
+
+  <script src="quiz-engine.js"></script>
+  <script src="random-questions-180.js"></script>
+  <script>
+    // Load all 180 questions but shuffle and select 20 to display
+    const selectedQuestions = quizData.sort(() => Math.random() - 0.5).slice(0, 20);
+    renderQuiz(selectedQuestions);
+  </script>
+</body>
+</html>
