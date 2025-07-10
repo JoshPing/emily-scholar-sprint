@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Level 1: Megaprojects (Interactive - Preview)</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background-color: #f9f9ff; }
+    .question { margin-bottom: 40px; border-bottom: 1px solid #ccc; padding-bottom: 20px; }
+    .option { margin: 5px 0; padding: 10px; background-color: #e0ecff; border: 1px solid #aaa; border-radius: 5px; cursor: pointer; }
+    .option:hover { background-color: #d0e0f8; }
+    .feedback { display: none; margin-top: 10px; padding: 10px; background-color: #e6ffe6; border-left: 4px solid #4CAF50; }
+    .explanation { display: none; margin-top: 10px; padding: 10px; background-color: #f0f0ff; border-left: 4px solid #3333cc; }
+    button { margin-top: 10px; }
+  </style>
+  <script>
+    function checkAnswer(selected, correctId, feedbackId) {
+      const fb = document.getElementById(feedbackId);
+      fb.innerText = selected === correctId ? "✅ Correct!" : "❌ Try again.";
+      fb.style.display = "block";
+    }
+    function toggleExplanation(expId) {
+      var exp = document.getElementById(expId);
+      exp.style.display = exp.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</head>
+<body>
+  <h1>🔹 Level 1: Megaprojects - Preview (5 Questions)</h1>
+
+  <!-- Q1 -->
+  <div class="question">
+    <h3>1. What is the main goal of NEOM, the planned city in Saudi Arabia?</h3>
+    <div class="option" onclick="checkAnswer('A','C','fb1')">A. A film production hub</div>
+    <div class="option" onclick="checkAnswer('B','C','fb1')">B. A new agricultural center</div>
+    <div class="option" onclick="checkAnswer('C','C','fb1')">C. A clean-energy smart city</div>
+    <div class="option" onclick="checkAnswer('D','C','fb1')">D. A desert wildlife reserve</div>
+    <div id="fb1" class="feedback"></div>
+    <button onclick="toggleExplanation('exp1')">📖 Expand Explanation</button>
+    <div id="exp1" class="explanation">
+      <strong>📘 Keywords:</strong><br>- clean-energy city: 清洁能源城市<br>- smart city: 智慧城市<br>
+      <br><strong>🧠 Reasoning:</strong><br>NEOM's goal is to build a futuristic, sustainable city powered by renewable energy.
+    </div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="question">
+    <h3>2. Why did the Big Dig in Boston face so many problems?</h3>
+    <div class="option" onclick="checkAnswer('A','D','fb2')">A. It was cancelled before it started</div>
+    <div class="option" onclick="checkAnswer('B','D','fb2')">B. No one used the new highway</div>
+    <div class="option" onclick="checkAnswer('C','D','fb2')">C. It was finished ahead of schedule</div>
+    <div class="option" onclick="checkAnswer('D','D','fb2')">D. It had delays, leaks, poor materials, and cost overruns</div>
+    <div id="fb2" class="feedback"></div>
+    <button onclick="toggleExplanation('exp2')">📖 Expand Explanation</button>
+    <div id="exp2" class="explanation">
+      <strong>📘 Keywords:</strong><br>- cost overrun: 超预算<br>- leaks: 漏水<br><br>
+      <strong>🧠 Reasoning:</strong><br>The Big Dig had many problems during construction and operation including high cost, poor design, and even accidents.
+    </div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="question">
+    <h3>3. What was the original purpose of the Big Dig?</h3>
+    <div class="option" onclick="checkAnswer('A','A','fb3')">A. To reduce traffic in Boston’s old streets</div>
+    <div class="option" onclick="checkAnswer('B','A','fb3')">B. To build a new airport</div>
+    <div class="option" onclick="checkAnswer('C','A','fb3')">C. To improve Boston’s ports</div>
+    <div class="option" onclick="checkAnswer('D','A','fb3')">D. To connect Boston and New York</div>
+    <div id="fb3" class="feedback"></div>
+    <button onclick="toggleExplanation('exp3')">📖 Expand Explanation</button>
+    <div id="exp3" class="explanation">
+      <strong>📘 Keywords:</strong><br>- reduce traffic: 减少交通拥堵<br><br>
+      <strong>🧠 Reasoning:</strong><br>The Big Dig was meant to ease traffic problems in Boston by rerouting highways underground.
+    </div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="question">
+    <h3>4. Why was Canada’s high-speed rail never built?</h3>
+    <div class="option" onclick="checkAnswer('A','B','fb4')">A. It was already finished</div>
+    <div class="option" onclick="checkAnswer('B','B','fb4')">B. Studies showed it was too expensive</div>
+    <div class="option" onclick="checkAnswer('C','B','fb4')">C. Canada had too many tourists</div>
+    <div class="option" onclick="checkAnswer('D','B','fb4')">D. It was against the law</div>
+    <div id="fb4" class="feedback"></div>
+    <button onclick="toggleExplanation('exp4')">📖 Expand Explanation</button>
+    <div id="exp4" class="explanation">
+      <strong>📘 Keywords:</strong><br>- studies: 研究<br>- expensive: 昂贵的<br><br>
+      <strong>🧠 Reasoning:</strong><br>Canada never built high-speed rail because studies showed it would cost too much and have other logistical issues.
+    </div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="question">
+    <h3>5. What makes the Channel Tunnel special?</h3>
+    <div class="option" onclick="checkAnswer('A','C','fb5')">A. It is the longest bridge in the world</div>
+    <div class="option" onclick="checkAnswer('B','C','fb5')">B. It connects Africa to Europe</div>
+    <div class="option" onclick="checkAnswer('C','C','fb5')">C. It goes under the sea to link England and France</div>
+    <div class="option" onclick="checkAnswer('D','C','fb5')">D. It is only for cars and buses</div>
+    <div id="fb5" class="feedback"></div>
+    <button onclick="toggleExplanation('exp5')">📖 Expand Explanation</button>
+    <div id="exp5" class="explanation">
+      <strong>📘 Keywords:</strong><br>- under the sea: 海底下<br>- tunnel: 隧道<br><br>
+      <strong>🧠 Reasoning:</strong><br>The Channel Tunnel is an underwater rail tunnel linking England and France — a huge achievement in transportation.
+    </div>
+  </div>
+
+</body>
+</html>
