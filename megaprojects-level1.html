@@ -1,13 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Level 1: Megaprojects - 20 Questions ✅</title>
+  <title>🧱 Megaprojects - Level 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="quiz-style.css" />
 </head>
-<body style="font-family: sans-serif; background: #f4f8fc; padding: 20px;">
-  <h1>🔷 Level 1: Megaprojects - Preview (5 Questions)</h1>
-  <script src="megaprojects-level1-data.js"></script>
+<body>
+  <h1>🧱 Megaprojects - Level 1</h1>
+  <div id="quiz-container"></div>
+
+  <!-- 脚本依赖顺序很重要 -->
   <script src="quiz-engine.js"></script>
+  <script src="megaprojects-level1-data.js"></script>
+  <script>
+    renderQuiz(quizData);
+  </script>
 </body>
 </html>
