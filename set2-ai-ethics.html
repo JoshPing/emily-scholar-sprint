@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Set 2: AI & Ethics Quiz</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background-color: #fff9f4; }
+    .question { margin-bottom: 40px; border-bottom: 1px solid #ccc; padding-bottom: 20px; }
+    .option { margin: 5px 0; padding: 10px; background-color: #ffefd5; border: 1px solid #aaa; border-radius: 5px; cursor: pointer; }
+    .option:hover { background-color: #ffe4b5; }
+    .feedback { display: none; margin-top: 10px; padding: 10px; background-color: #e6ffe6; border-left: 4px solid #4CAF50; }
+    .explanation { display: none; margin-top: 10px; padding: 10px; background-color: #f0f0ff; border-left: 4px solid #3333cc; }
+    button { margin-top: 10px; }
+  </style>
+  <script>
+    function checkAnswer(selected, correctId, feedbackId) {
+      const fb = document.getElementById(feedbackId);
+      fb.innerText = selected === correctId ? "✅ Correct!" : "❌ Try again.";
+      fb.style.display = "block";
+    }
+    function toggleExplanation(expId) {
+      var exp = document.getElementById(expId);
+      exp.style.display = exp.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</head>
+<body>
+  <h1>🤖 Scholar Sprint - Set 2: AI & Ethics (20 Questions)</h1>
+  <p>This is a sample set of 20 questions about artificial intelligence, technology, and ethics.</p>
+
+  <!-- Question 1 -->
+  <div class="question">
+    <h3>1. Why are people worried about AI in creative industries?</h3>
+    <div class="option" onclick="checkAnswer('A','B','fb1')">A. AI can't do anything creative</div>
+    <div class="option" onclick="checkAnswer('B','B','fb1')">B. AI might replace human jobs</div>
+    <div class="option" onclick="checkAnswer('C','B','fb1')">C. AI doesn't exist</div>
+    <div class="option" onclick="checkAnswer('D','B','fb1')">D. AI always makes better music</div>
+    <div id="fb1" class="feedback"></div>
+    <button onclick="toggleExplanation('exp1')">📖 Expand Explanation</button>
+    <div id="exp1" class="explanation">
+      <strong>Keywords:</strong> replace: 取代；creative industries: 创意产业<br>
+      <strong>Reasoning:</strong> People worry that AI might take jobs away from humans in art, music, and writing.
+    </div>
+  </div>
+
+  <!-- 19 more questions would go here -->
+
+</body>
+</html>
